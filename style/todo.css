@@ -1,0 +1,117 @@
+.contents{
+    background-color: white;
+    padding: 20px;
+
+    .todo-wrapper{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        .todo{
+            width: min(280px, 40%);
+            height: 200px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            /* background-color: #dcdcdc; */
+            background-color: #80a8c0a1;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 10px solid #0000008c;
+            position: relative;
+
+            .todoPriority, .todoDate{
+                color: #0000008c;
+                font-size: 13px;
+            }
+            
+            .todoPriority{
+                margin-top: 10px;
+            }
+
+            .todoEditBtn{
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                border: none;
+                padding: 5px 5px;
+                border-radius: 5px;
+            }
+
+            .todoDeleteBtn{
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                border: none;
+                padding: 5px 5px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .todo-popup{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(24, 24, 24, 0.359);
+        color: black;
+        position: fixed;
+        top: 0;
+        display: none;
+        place-items: center;
+        left: 0;
+        z-index: 1;
+
+        .todo-contents{
+            width: 400px;
+            height: 500px;
+            background-color: white;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .cancelPopup{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                border: none;
+                background: none;
+                cursor: pointer;
+                font-weight: 900;
+            }
+
+            .todoInputsContainer{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+
+                input, .selectPriority{
+                    height: 40px;
+                    width: 100%;
+                    font-size: 16px;
+                    padding: 10px;
+                }
+            }
+
+            .addTodoBtn{
+                margin-top: 20px;
+                border: none;
+                padding: 15px 40px;
+                font-size: 25px;
+                cursor: pointer;
+                background-color: #2f2f2f;
+                color: white;
+            }
+        }
+    }
+
+    .active{
+        display: grid;
+    }
+
+}
